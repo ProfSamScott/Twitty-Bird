@@ -1,0 +1,16 @@
+{
+  "name": "Twitty Bird",
+  "description": "A bird game that retweets stuff when you succeed.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "*://www-acad.sheridanc.on.ca/staff/scottsam/twittybird/"
+    ],
+    "launch": {
+      "web_url": "http://www-acad.sheridanc.on.ca/staff/scottsam/twittybird/",
+	  "container": "tab"
+    }
+  },
+  "icons": { "16": "tb-16.png", "128": "tb-128.png" }
+ }
