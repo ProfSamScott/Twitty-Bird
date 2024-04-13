@@ -1,18 +1,18 @@
 /* Twitty Bird, (c) Sam Scott, 2014
- * http://www-acad.sheridancollege.ca/staff/scottsam
+ * https://www.cas.mcmaster.ca/samscott/tb/
  */
 (function() {
     function twittybird() {
-        var flapSound = new Audio("sounds/164679flap.mp3");
+        var flapSound = new Audio('sounds/164679flap.mp3');
         flapSound.load();
         var buttonSound = flapSound;
-        var tweetSound = new Audio("sounds/31384tweet.mp3");
+        var tweetSound = new Audio('sounds/31384tweet.mp3');
         tweetSound.load();
-        var ouchSound = new Audio("sounds/9874ouch.mp3");
+        var ouchSound = new Audio('sounds/9874ouch.mp3');
         ouchSound.load();
-        var deadBirdSound = new Audio("sounds/57271deadbird.mp3");
+        var deadBirdSound = new Audio('sounds/57271deadbird.mp3');
         deadBirdSound.load();
-        var ambientSound = new Audio("sounds/85138ambience.mp3");
+        var ambientSound = new Audio('sounds/85138ambience.mp3');
         setTimeout(function() {
             ambientSound.load();
             ambientSound.loop = true;
@@ -699,22 +699,22 @@
 
         function getTags() {
             clearTimeout(sb.tagtimer);
-            var xmlhttp;
-            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            } else {// code for IE6, IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.open("GET", "http://www-acad.sheridanc.on.ca/staff/scottsam/twittybird/hashtags.php", true);
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    sb.hashtags = JSON.parse(xmlhttp.responseText);
-                    sb.nexttag = parseInt(Math.random() * sb.hashtags.length);
-                    sb.loadingtags = false;
-                }
-            };
-            sb.loadingtags = true;
-            xmlhttp.send();
+            // var xmlhttp;
+            // if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+            //     xmlhttp = new XMLHttpRequest();
+            // } else {// code for IE6, IE5
+            //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            // }
+            // xmlhttp.open("GET", "hashtags.php", true);
+            // xmlhttp.onreadystatechange = function() {
+            //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //         sb.hashtags = JSON.parse(xmlhttp.responseText);
+            //         sb.nexttag = parseInt(Math.random() * sb.hashtags.length);
+            //         sb.loadingtags = false;
+            //     }
+            // };
+            // sb.loadingtags = true;
+            // xmlhttp.send();
             if (bird.isAlive() && !(sb.auto))
                 sb.tagtimer = setTimeout(getTags, 30000);
         }
