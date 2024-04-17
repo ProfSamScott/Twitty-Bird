@@ -5,4 +5,4 @@ Originally it used the Twitter API to load trending hashtags, then the bird woul
 
 Play a live version here: https://www.cas.mcmaster.ca/samscott/tb/
 
-(April 13, 2024: Sound in live version currently broken due to the server blocking mp3's. I'm working on it.
+(April 13, 2024: Sound in live version currently broken due to the server blocking mp3's. I'm working on it.)
